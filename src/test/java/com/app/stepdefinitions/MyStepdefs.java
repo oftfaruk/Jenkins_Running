@@ -14,8 +14,9 @@ public class MyStepdefs {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
+      //  options.addArguments("--headless");
         System.setProperty("webdriver.chrome.args", "--disable-logging");
         System.setProperty("webdriver.chrome.silentOutput", "true");
         options.setExperimentalOption("useAutomationExtension", false);
