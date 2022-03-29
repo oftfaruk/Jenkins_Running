@@ -5,11 +5,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"json:target/cucumber.json",
-                "html:target/htmlreprt.html",
-               // "rerun:target/rerun.txt"
-                },
-        features = "src/test/resources/features/Web",
+        plugin = {"json:target/cucumber.json"
+        },
+        features = "src/test/resources/features",
         glue =  "com/app/stepdefinitions",
         strict = true,
         dryRun = false,
