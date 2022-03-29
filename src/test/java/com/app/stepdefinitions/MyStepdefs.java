@@ -3,6 +3,7 @@ package com.app.stepdefinitions;
 import com.app.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -13,6 +14,7 @@ public class MyStepdefs {
     public void userIsOnTheLoginPage() throws SQLException {
 
         WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         options.addArguments("--no-sandbox");
@@ -30,9 +32,11 @@ public class MyStepdefs {
         // System.setProperty("webdriver.chrome.driver", "http://18.203.176.202:8080");
         //options.setBinary("http://18.203.176.202:8080");
         options.addArguments("--remote-debugging-port=9222");
+        String chromeDriverPath = "./usr/bin/chromedriver";
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
 
-        ChromeDriver driver = new ChromeDriver(options);
+        ChromeDriver driver1 = new ChromeDriver(options);
         driver.get(ConfigurationReader.get("url"));
 
 
