@@ -24,6 +24,8 @@ public class MyStepdefs {
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox"); // Bypass OS security model
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
+
 
         ChromeDriver driver = new ChromeDriver(options);
         driver.get(ConfigurationReader.get("url"));
