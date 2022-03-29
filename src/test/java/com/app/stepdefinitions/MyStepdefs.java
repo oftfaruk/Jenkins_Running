@@ -16,6 +16,8 @@ public class MyStepdefs {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
+        System.setProperty("webdriver.chrome.args", "--disable-logging");
+        System.setProperty("webdriver.chrome.silentOutput", "true");
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("--disable-gpu"); // applicable to windows os only
         options.addArguments("start-maximized"); // open Browser in maximized mode
