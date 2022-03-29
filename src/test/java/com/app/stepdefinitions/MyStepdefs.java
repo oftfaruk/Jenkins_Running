@@ -22,7 +22,7 @@ public class MyStepdefs {
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
        // Bypass OS security model
         options.addArguments("--disable-dev-shm-usage");
-        options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+        options.setBinary("http://18.203.176.202:8080");
 
 
 
