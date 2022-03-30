@@ -19,7 +19,7 @@ public class MyStepdefs {
         options.addArguments("--disable-dev-shm-usage");     
         //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         options.setExperimentalOption("useAutomationExtension", false);
-        options.setBinary("/usr/bin/google-chrome");
+     //   options.setBinary("/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(options);
 
