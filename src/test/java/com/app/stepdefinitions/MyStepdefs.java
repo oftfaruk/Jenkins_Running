@@ -18,8 +18,11 @@ public class MyStepdefs {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        options.setExperimentalOption("useAutomationExtension", false);
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+
+
 
 //
 
