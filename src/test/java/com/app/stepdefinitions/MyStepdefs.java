@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.sql.SQLException;
+import java.util.Collections;
 
 public class MyStepdefs {
     @Given("User is on the login page")
@@ -18,12 +19,18 @@ public class MyStepdefs {
         options.addArguments("--disable-setuid-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-        //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         options.setExperimentalOption("useAutomationExtension", false);
         options.setBinary("/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver(options);
 
+
+       // options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
+        options.addArguments("start-maximized");
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        options.setExperimentalOption("useAutomationExtension", false);
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
 
 
 //
@@ -47,7 +54,6 @@ public class MyStepdefs {
 //
 //
 //        ChromeDriver driver1 = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
 
 
     }
