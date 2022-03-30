@@ -16,8 +16,7 @@ public class MyStepdefs {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-extensions"); // disabling extensions
         options.addArguments("--disable-setuid-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");     
         //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         options.setExperimentalOption("useAutomationExtension", false);
         options.setBinary("/usr/bin/google-chrome");
