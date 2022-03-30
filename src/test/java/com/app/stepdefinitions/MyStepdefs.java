@@ -11,12 +11,15 @@ import java.sql.SQLException;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws SQLException {
-    //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-extensions"); // disabling extensions
+        //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-//        ChromeOptions options = new ChromeOptions();
+
 //
-//        options.addArguments("--no-sandbox");
+
 //        options.addArguments("--headless");
 //        System.setProperty("webdriver.chrome.args", "--disable-logging");
 //        System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -24,7 +27,7 @@ public class MyStepdefs {
 //        options.addArguments("--disable-gpu"); // applicable to windows os only
 //        options.addArguments("start-maximized"); // open Browser in maximized mode
 //        options.addArguments("disable-infobars"); // disabling infobars
-//        options.addArguments("--disable-extensions"); // disabling extensions
+//
 //        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 //        // Bypass OS security model
 //        options.addArguments("--disable-dev-shm-usage");
