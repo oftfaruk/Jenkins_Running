@@ -20,7 +20,7 @@ public class MyStepdefs {
         //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         options.setExperimentalOption("useAutomationExtension", false);
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
 
 
 
