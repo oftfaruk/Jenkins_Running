@@ -15,6 +15,7 @@ public class MyStepdefs {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-extensions"); // disabling extensions
         options.addArguments("--disable-setuid-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         //    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
