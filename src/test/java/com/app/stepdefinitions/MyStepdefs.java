@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws SQLException {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+     //   System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-extensions"); // disabling extensions
