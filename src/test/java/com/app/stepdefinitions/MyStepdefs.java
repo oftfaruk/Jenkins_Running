@@ -12,25 +12,28 @@ import java.util.Collections;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws SQLException {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-setuid-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        options.setExperimentalOption("useAutomationExtension", false);
-        options.setBinary("/usr/bin/google-chrome");
-        WebDriverManager.chromedriver().setup();
-
-
-       // options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
-        options.addArguments("start-maximized");
-        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-        options.setExperimentalOption("useAutomationExtension", false);
+        options.addArguments("headless");
         WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
+//        options.setBinary("/usr/bin/google-chrome");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-extensions"); // disabling extensions
+//        options.addArguments("--disable-setuid-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--headless");
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//        options.setExperimentalOption("useAutomationExtension", false);
+//
+//        WebDriverManager.chromedriver().setup();
+//
+//
+//       // options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
+//        options.addArguments("start-maximized");
+//        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+//        options.setExperimentalOption("useAutomationExtension", false);
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.get("https://www.google.com/");
 
 
 //
