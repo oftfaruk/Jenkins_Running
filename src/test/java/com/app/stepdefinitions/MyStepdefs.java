@@ -13,13 +13,14 @@ public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws SQLException {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--no-sandbox");
         options.addArguments("headless");
         WebDriver driver = new ChromeDriver(options);
         options.addArguments("--disable-extensions"); // disabling extensions
-        driver.get("https://www.google.com/");
+
 
 
 
@@ -37,7 +38,7 @@ public class MyStepdefs {
 //        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 //        options.setExperimentalOption("useAutomationExtension", false);
 //        WebDriver driver = new ChromeDriver(options);
-
+        driver.get("https://www.google.com/");
 
 
 //
