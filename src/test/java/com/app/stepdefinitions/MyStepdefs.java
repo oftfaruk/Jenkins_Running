@@ -14,10 +14,11 @@ public class MyStepdefs {
     public void userIsOnTheLoginPage() throws SQLException {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
         options.addArguments("headless");
         WebDriver driver = new ChromeDriver(options);
-//        options.setBinary("/usr/bin/google-chrome");
-//        options.addArguments("--no-sandbox");
+        //  options.setBinary("/usr/bin/google-chrome");
+
 //        options.addArguments("--disable-extensions"); // disabling extensions
 //        options.addArguments("--disable-setuid-sandbox");
 //        options.addArguments("--disable-dev-shm-usage");
