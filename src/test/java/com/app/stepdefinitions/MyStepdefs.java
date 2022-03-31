@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.sql.SQLException;
+
 
 public class MyStepdefs {
     @Given("User is on the login page")
-    public void userIsOnTheLoginPage() throws SQLException {
+    public void userIsOnTheLoginPage(){
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
