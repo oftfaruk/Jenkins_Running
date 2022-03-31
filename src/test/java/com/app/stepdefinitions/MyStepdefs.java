@@ -21,13 +21,13 @@ public class MyStepdefs {
 //        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 //options.add_argument('--remote-debugging-port=9222')
 //        WebDriverManager.chromedriver().setup();
-//        WebDriver driver = new ChromeDriver(options);
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://google.com");
+////        WebDriver driver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
+//        WebDriverManager.chromedriver().setup();
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://google.com");
 
 
     }
