@@ -2,6 +2,7 @@ package com.app.stepdefinitions;
 
 import io.cucumber.java.en.Given;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() {
-        System.setProperty("webdriver.chrome.driver", "");
+     //   System.setProperty("webdriver.chrome.driver", "");
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
 //        options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -21,6 +22,8 @@ public class MyStepdefs {
 //options.add_argument('--remote-debugging-port=9222')
 //        WebDriverManager.chromedriver().setup();
 ////        WebDriver driver = new ChromeDriver(options);
+
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox");
 //        options.addArguments("--disable-dev-shm-usage");

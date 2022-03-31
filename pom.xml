@@ -15,27 +15,76 @@
 
 
     <dependencies>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.1.0</version>
+        </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>5.7.0</version>
         </dependency>
-
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-client-api</artifactId>
+            <version>1.0</version>
+        </dependency>
 
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.json</artifactId>
@@ -51,6 +100,11 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
             <version>1.5.6</version>
         </dependency>
 
@@ -71,7 +125,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <includes>
-
+                        <include>**/*CukesRunner.java</include>
                         <!--                        <include>**/*FailedTestRunner.java</include>-->
                     </includes>
                 </configuration>
@@ -88,11 +142,11 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-
-
-
+                            <projectName>Cucumber HTML Reports</projectName>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
-
+                                <param>**/cucumber*.json</param>
                             </jsonFiles>
                         </configuration>
                     </execution>
@@ -109,6 +163,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
