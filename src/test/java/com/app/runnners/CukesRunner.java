@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
                 "html:target/htmlreprt.html",
                // "rerun:target/rerun.txt"
                 },
-        features = "src/test/resources/features/Web",
+        features = "src/test/resources/features",
         glue =  "com/app/stepdefinitions",
         strict = true,
         dryRun = false,
