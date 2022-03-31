@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.sql.SQLException;
-import java.util.Collections;
 
 public class MyStepdefs {
     @Given("User is on the login page")
@@ -20,12 +19,14 @@ public class MyStepdefs {
 //        options.addArguments("--disable-extensions"); // disabling extensions
 //        options.addArguments("--disable-gpu"); // applicable to windows os only
 //        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-//
+//options.add_argument('--remote-debugging-port=9222')
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-
         driver.get("https://google.com");
 
 
