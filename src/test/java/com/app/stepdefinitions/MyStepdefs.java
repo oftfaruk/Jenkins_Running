@@ -18,10 +18,11 @@ public class MyStepdefs {
         options.addArguments("--no-sandbox");
         options.addArguments("headless");
         WebDriver driver = new ChromeDriver(options);
+        options.addArguments("--disable-extensions"); // disabling extensions
         driver.get("https://www.google.com/");
 
 
-//        options.addArguments("--disable-extensions"); // disabling extensions
+
 //        options.addArguments("--disable-setuid-sandbox");
 //        options.addArguments("--disable-dev-shm-usage");
 //        options.addArguments("--headless");
