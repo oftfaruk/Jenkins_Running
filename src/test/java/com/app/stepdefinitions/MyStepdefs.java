@@ -34,7 +34,7 @@ public class MyStepdefs {
 //        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 //        options.setExperimentalOption("useAutomationExtension", false);
 //        WebDriver driver = new ChromeDriver(options);
-//        driver.get("https://www.google.com/");
+        driver.get("https://www.google.com/");
 
 
 //
