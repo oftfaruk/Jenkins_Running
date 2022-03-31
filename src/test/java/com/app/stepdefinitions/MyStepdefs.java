@@ -33,7 +33,7 @@ public class MyStepdefs {
        //   WebDriverManager.chromedriver().setup();
 
 
-    //    options.addArguments("headless");
+        options.addArguments("headless");
 //        WebDriver driver = new ChromeDriver();
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://google.com");
