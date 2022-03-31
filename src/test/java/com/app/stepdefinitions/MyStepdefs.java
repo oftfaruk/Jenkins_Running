@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() {
-//       System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+       System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //      System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
@@ -26,9 +26,9 @@ public class MyStepdefs {
 
      //   WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--no-sandbox");
-//        options.setBinary("/usr/bin/google-chrome");
+        options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--disable-dev-shm-usage");
        //   WebDriverManager.chromedriver().setup();
 
