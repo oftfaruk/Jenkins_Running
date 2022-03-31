@@ -12,7 +12,7 @@ import java.util.Collections;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws SQLException {
-        System.setProperty("webdriver.chrome.driver", "\\usr\\bin\\chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
