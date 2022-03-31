@@ -53,11 +53,7 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.5.6</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.5.6</version>
-        </dependency>
+
     </dependencies>
 
     <build>
@@ -75,7 +71,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <includes>
-                        <include>**/*CukesRunner.java</include>
+
                         <!--                        <include>**/*FailedTestRunner.java</include>-->
                     </includes>
                 </configuration>
@@ -92,11 +88,11 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Cucumber HTML Reports</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
+
+
+
                             <jsonFiles>
-                                <param>**/cucumber*.json</param>
+
                             </jsonFiles>
                         </configuration>
                     </execution>
