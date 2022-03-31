@@ -12,7 +12,8 @@ import java.util.Collections;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws SQLException {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+     //   System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");
@@ -23,7 +24,7 @@ public class MyStepdefs {
         options.addArguments("--disable-setuid-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+
 //        options.setExperimentalOption("useAutomationExtension", false);
 //
 //        WebDriverManager.chromedriver().setup();
