@@ -29,7 +29,7 @@ public class MyStepdefs {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--no-sandbox");
-      //  options.setBinary("/usr/bin/google-chrome");
+       options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--verbose");
 //        options.addArguments("--whitelisted-ips=")
