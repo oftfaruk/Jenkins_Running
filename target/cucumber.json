@@ -1,0 +1,41 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-01T16:38:12.926Z",
+        "line": 3,
+        "name": "Login",
+        "description": "",
+        "id": "login-the-page;login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5293000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on the login page",
+            "match": {
+              "location": "com.app.stepdefinitions.MyStepdefs.userIsOnTheLoginPage()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke11"
+          }
+        ]
+      }
+    ],
+    "name": "Login the page",
+    "description": "",
+    "id": "login-the-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]

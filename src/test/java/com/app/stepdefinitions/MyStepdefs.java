@@ -25,7 +25,7 @@ public class MyStepdefs {
 ////        WebDriver driver = new ChromeDriver(options);
 
         //   WebDriverManager.chromedriver().setup();
-        WebDriverManager.chromedriver().setup();
+      //  WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--no-sandbox");
