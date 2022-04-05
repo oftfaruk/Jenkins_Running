@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() {
-      //mvn clean install System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        //mvn clean install System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //      System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
@@ -25,20 +25,20 @@ public class MyStepdefs {
 ////        WebDriver driver = new ChromeDriver(options);
 
         //   WebDriverManager.chromedriver().setup();
-       WebDriverManager.chromedriver().setup();
+        WebDriver driver;
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-      //  options.addArguments("--remote-debugging-port=9222");
+        //  options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--no-sandbox");
-     // options.setBinary("/usr/bin/google-chrome");
+        // options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--disable-dev-shm-usage");
-     //   options.addArguments("--verbose");
+        //   options.addArguments("--verbose");
 //        options.addArguments("--whitelisted-ips=")
-
 
 
         options.addArguments("headless");
 //        WebDriver driver = new ChromeDriver();
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.get("https://google.com");
 
 
