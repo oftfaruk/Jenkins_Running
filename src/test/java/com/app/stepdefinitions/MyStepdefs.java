@@ -25,21 +25,19 @@ public class MyStepdefs {
 ////        WebDriver driver = new ChromeDriver(options);
 
         //   WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver;
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         //  options.addArguments("--remote-debugging-port=9222");
-        options.addArguments("--no-sandbox");
+        //options.addArguments("--no-sandbox");
         // options.setBinary("/usr/bin/google-chrome");
-        options.addArguments("--disable-dev-shm-usage");
+      //  options.addArguments("--disable-dev-shm-usage");
         //   options.addArguments("--verbose");
 //        options.addArguments("--whitelisted-ips=")
-
-
         options.addArguments("headless");
 //        WebDriver driver = new ChromeDriver();
         driver = new ChromeDriver(options);
-        driver.get("https://google.com");
+        driver.get("https://test.rack-eye.com/login");
 
 
     }
