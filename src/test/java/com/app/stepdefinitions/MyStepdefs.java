@@ -36,7 +36,7 @@ public class MyStepdefs {
 //        options.addArguments("--whitelisted-ips=")
 
 
-       // options.addArguments("headless");
+        options.addArguments("headless");
 //        WebDriver driver = new ChromeDriver();
         driver = new ChromeDriver(options);
         driver.get("https://google.com");
