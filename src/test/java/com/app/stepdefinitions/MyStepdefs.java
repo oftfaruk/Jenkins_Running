@@ -30,16 +30,16 @@ public class MyStepdefs {
         WebDriverManager.chromedriver().setup();
         WebDriver driver;
         ChromeOptions options = new ChromeOptions();
-          options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--no-sandbox");
-//        // options.setBinary("/usr/bin/google-chrome");
+        options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--disable-dev-shm-usage");
 //        //   options.addArguments("--verbose");
 ////        options.addArguments("--whitelisted-ips=")
         options.addArguments("headless");
 ////        WebDriver driver = new ChromeDriver();
         driver = new ChromeDriver(options);
-     //   WebDriverManager.firefoxdriver().setup();
+        //   WebDriverManager.firefoxdriver().setup();
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.addArguments("headless");
 //        options.addArguments("--disable-dev-shm-usage");
