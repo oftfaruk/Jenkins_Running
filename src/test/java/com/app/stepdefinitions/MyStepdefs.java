@@ -3,7 +3,11 @@ package com.app.stepdefinitions;
 
 import com.app.utilities.Driver;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.Collections;
 
 
 public class MyStepdefs {
@@ -43,8 +47,20 @@ public class MyStepdefs {
 ////        WebDriver driver = new FirefoxDriver();
 ////        driver = new FirefoxDriver(options);
 //        driver.get("https://test.rack-eye.com/login");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 
-       Driver.get().get("https://test.rack-eye.com/login");
+        ChromeOptions options = new ChromeOptions();
+      //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
+     //   options.addArguments("start-maximized");
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        options.setExperimentalOption("useAutomationExtension", false);
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
+
+
+
+
+//       Driver.get().get("https://test.rack-eye.com/login");
         System.out.println("hello  deneme123");
     }
 }
