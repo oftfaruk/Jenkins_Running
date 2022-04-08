@@ -82,7 +82,7 @@ public class Driver {
         }
         isDriverActive = true;
         driverPool.get().manage().window().maximize();
-        driverPool.get().manage().timeouts().implicitlyWait(Long.parseLong(ConfigurationReader.get("longImplicit")), TimeUnit.SECONDS);
+        //driverPool.get().manage().timeouts().implicitlyWait(Long.parseLong(ConfigurationReader.get("longImplicit")), TimeUnit.SECONDS);
         return driverPool.get();
     }
 
