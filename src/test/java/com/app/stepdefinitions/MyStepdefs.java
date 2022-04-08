@@ -50,14 +50,13 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 
         ChromeOptions options = new ChromeOptions();
-      //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
-     //   options.addArguments("start-maximized");
+        //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
+        //   options.addArguments("start-maximized");
+        options.addArguments("--no-sandbox");
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         options.setExperimentalOption("useAutomationExtension", false);
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com/");
-
-
 
 
 //       Driver.get().get("https://test.rack-eye.com/login");
