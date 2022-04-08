@@ -44,7 +44,7 @@ public class MyStepdefs {
 ////        driver = new FirefoxDriver(options);
 //        driver.get("https://test.rack-eye.com/login");
 
-       // Driver.get().get("https://test.rack-eye.com/login");
+       Driver.get().get("https://test.rack-eye.com/login");
         System.out.println("hello  deneme123");
     }
 }
