@@ -15,8 +15,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import java.util.Collections;
 import java.util.List;
 
-
 public class MyStepdefs {
+
+    static WebDriver driver;
+
+
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
         //mvn clean install System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -71,11 +74,14 @@ public class MyStepdefs {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.setBinary("/usr/bin/google-chrome");
-        WebDriver driver = new ChromeDriver(options);
+
+        driver = new ChromeDriver(options);
 //        driver.get("https://google.com");
         Thread.sleep(5000);
         driver.get("https://test.rack-eye.com/login");
+
         Thread.sleep(5000);
+
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
         String title = driver.getTitle();
@@ -83,7 +89,7 @@ public class MyStepdefs {
 //        driver.get("https://qascript.com/run-jenkins-job-with-selenium-tests-on-aws-ec2-linux-server/");
 //
 //        Thread.sleep(5000);
-//        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+        System.out.println("driver.getPageSource() = " + driver.getPageSource());
 //        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 //        System.out.println("driver.getTitle() = " + driver.getTitle());
 //        driver.get("https://google.com");
