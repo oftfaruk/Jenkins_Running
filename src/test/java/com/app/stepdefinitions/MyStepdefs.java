@@ -72,12 +72,12 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+      //  options.addArguments("headless");
       //  options.setBinary("/usr/bin/google-chrome");
 
         driver = new ChromeDriver(options);
 //        driver.get("https://google.com");
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
         driver.get("https://test.rack-eye.com/login");
 
         Thread.sleep(5000);
