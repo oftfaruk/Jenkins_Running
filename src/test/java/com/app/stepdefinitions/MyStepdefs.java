@@ -73,7 +73,7 @@ public class MyStepdefs {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        options.setBinary("/usr/bin/google-chrome");
+      //  options.setBinary("/usr/bin/google-chrome");
 
         driver = new ChromeDriver(options);
 //        driver.get("https://google.com");
