@@ -75,7 +75,7 @@ public class MyStepdefs {
         driver.get("https://google.com");
 
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         String title = driver.getTitle();
         System.out.println("title = " + title);
         List<WebElement> elements = driver.findElements(By.xpath("//*"));
