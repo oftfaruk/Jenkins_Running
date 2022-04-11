@@ -112,7 +112,7 @@ public class MyStepdefs {
         System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
         //   Driver.get().navigate().back();
         System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
-        System.out.println("Driver.get().findElement(By.xpath(\".//label[@for='username']\")).getText() = " + Driver.get().findElement(By.xpath(".//label[@for='username']")).getText());
+     //   System.out.println("Driver.get().findElement(By.xpath(\".//label[@for='username']\")).getText() = " + Driver.get().findElement(By.xpath(".//label[@for='username']")).getText());
 
         for (WebElement element : Driver.get().findElements(By.xpath("//*"))) {
             System.out.println("element = " + element);
