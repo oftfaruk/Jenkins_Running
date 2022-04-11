@@ -101,17 +101,17 @@ public class MyStepdefs {
 ////        driver.navigate().back();
 ////        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
-        Driver.get().get(ConfigurationReader.get("url"));
+//        Driver.get().get(ConfigurationReader.get("url"));
 
-        System.out.println("Driver.get().findElement(By.xpath(\"//*\")).getText() = " + Driver.get().findElement(By.xpath("//*")).getText());
-        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
-        System.out.println("Driver.get().getPageSource() = " + Driver.get().getPageSource());
+//        System.out.println("Driver.get().findElement(By.xpath(\"//*\")).getText() = " + Driver.get().findElement(By.xpath("//*")).getText());
+//        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
+//        System.out.println("Driver.get().getPageSource() = " + Driver.get().getPageSource());
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
         Driver.get().get("https://test.rack-eye.com/login");
         System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
-        Driver.get().navigate().back();
-        System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
+        //   Driver.get().navigate().back();
+        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 
 //        System.out.println("title "+driver.getTitle());
 //        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
