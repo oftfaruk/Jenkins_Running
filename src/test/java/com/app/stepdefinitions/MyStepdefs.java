@@ -108,7 +108,7 @@ public class MyStepdefs {
         System.out.println("Driver.get().getPageSource() = " + Driver.get().getPageSource());
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-        Driver.get().get("https://google.com");
+        Driver.get().get("https://test.rack-eye.com/login");
         System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
         Driver.get().navigate().back();
         System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
