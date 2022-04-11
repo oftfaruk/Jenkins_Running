@@ -105,6 +105,7 @@ public class MyStepdefs {
 
         System.out.println("Driver.get().findElement(By.xpath(\"//*\")).getText() = " + Driver.get().findElement(By.xpath("//*")).getText());
         System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
+        System.out.println("Driver.get().getPageSource() = " + Driver.get().getPageSource());
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
 //        driver.get("https://google.com");
