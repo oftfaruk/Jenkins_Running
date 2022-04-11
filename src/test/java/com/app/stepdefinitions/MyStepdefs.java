@@ -72,18 +72,13 @@ public class MyStepdefs {
         options.addArguments("headless");
         options.setBinary("/usr/bin/google-chrome");
         WebDriver driver = new ChromeDriver(options);
-        driver.get("https://google.com");
-
+//        driver.get("https://google.com");
+        driver.get("https://qascript.com/run-jenkins-job-with-selenium-tests-on-aws-ec2-linux-server/");
 
         Thread.sleep(5000);
-        String title = driver.getTitle();
-        System.out.println("title = " + title);
-        List<WebElement> elements = driver.findElements(By.id("username"));
-        System.out.println("elements = " + elements);
-        for (WebElement element:elements) {
-            System.out.println("element.getText() = " + element.getText());
-        }
-        System.out.println("elements = " + elements);
+        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+        System.out.println("driver.getTitle() = " + driver.getTitle());
 
         System.out.println("hello  deneme123");
     }
