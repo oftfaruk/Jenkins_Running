@@ -72,9 +72,9 @@ public class MyStepdefs {
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://test.rack-eye.com/login");
         String title = driver.getTitle();
-        String text = driver.findElement(By.xpath("//label[@for='username']")).getText();
+       // String text = driver.findElement(By.xpath("//label[@for='username']")).getText();
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-        System.out.println("text " + text);
+       // System.out.println("text " + text);
 
         System.out.println("hello  deneme123");
     }
