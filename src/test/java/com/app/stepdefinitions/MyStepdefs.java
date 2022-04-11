@@ -16,7 +16,7 @@ import java.util.Collections;
 
 public class MyStepdefs {
     @Given("User is on the login page")
-    public void userIsOnTheLoginPage() {
+    public void userIsOnTheLoginPage() throws InterruptedException {
         //mvn clean install System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //      System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        ChromeOptions options = new ChromeOptions();
@@ -75,7 +75,8 @@ public class MyStepdefs {
        // String text = driver.findElement(By.xpath("//label[@for='username']")).getText();
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
        // System.out.println("text " + text);
-
+        Thread.sleep(3000);
+        System.out.println("driver.findElement(By.xpath(\"//p\")).getText() = " + driver.findElement(By.xpath("//p")).getText());
         System.out.println("hello  deneme123");
     }
 }
