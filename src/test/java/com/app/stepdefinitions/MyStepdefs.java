@@ -75,6 +75,7 @@ public class MyStepdefs {
 //        driver.get("https://google.com");
         Thread.sleep(5000);
         driver.get("https://test.rack-eye.com/login");
+        Thread.sleep(5000);
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
         String title = driver.getTitle();
