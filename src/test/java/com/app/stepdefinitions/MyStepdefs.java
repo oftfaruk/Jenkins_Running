@@ -80,6 +80,10 @@ public class MyStepdefs {
         System.out.println("title = " + title);
         List<WebElement> elements = driver.findElements(By.xpath("//*"));
         System.out.println("elements = " + elements);
+        for (WebElement element:elements) {
+            System.out.println("element.getText() = " + element.getText());
+        }
+        System.out.println("elements = " + elements);
 
         System.out.println("hello  deneme123");
     }
