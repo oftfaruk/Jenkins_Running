@@ -73,12 +73,20 @@ public class MyStepdefs {
         options.setBinary("/usr/bin/google-chrome");
         WebDriver driver = new ChromeDriver(options);
 //        driver.get("https://google.com");
+        Thread.sleep(5000);
         driver.get("https://qascript.com/run-jenkins-job-with-selenium-tests-on-aws-ec2-linux-server/");
 
         Thread.sleep(5000);
         System.out.println("driver.getPageSource() = " + driver.getPageSource());
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
         System.out.println("driver.getTitle() = " + driver.getTitle());
+        driver.get("https://google.com");
+        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+        System.out.println("driver.getTitle() = " + driver.getTitle());
+        driver.navigate().back();
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+
 
         System.out.println("hello  deneme123");
     }
