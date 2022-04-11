@@ -6,12 +6,14 @@ import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.Collections;
+import java.util.List;
 
 
 public class MyStepdefs {
@@ -76,9 +78,8 @@ public class MyStepdefs {
         Thread.sleep(3000);
         String title = driver.getTitle();
         System.out.println("title = " + title);
-        String text = driver.findElement(By.xpath("//label[@for='username']")).getText();
-        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-        System.out.println("text " + text);
+        List<WebElement> elements = driver.findElements(By.xpath("//*"));
+        System.out.println("elements.get(0).getText() = " + elements.get(0).getText());
 
         System.out.println("hello  deneme123");
     }
