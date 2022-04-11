@@ -102,6 +102,8 @@ public class MyStepdefs {
 ////        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
         Driver.get().get(ConfigurationReader.get("url"));
+        System.out.println("Driver.get().findElement(By.xpath(\"//*\")).getText() = " + Driver.get().findElement(By.xpath("//*")).getText());
+        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
         System.out.println("hello  deneme123");
     }
 }
