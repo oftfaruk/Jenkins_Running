@@ -4,6 +4,7 @@ package com.app.stepdefinitions;
 import com.app.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -71,7 +72,8 @@ public class MyStepdefs {
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com/");
         String title = driver.getTitle();
-        System.out.println("title = " + title);
+        String text = driver.findElement(By.xpath("//label[@for='username']")).getText();
+        System.out.println("text " + text);
 
         System.out.println("hello  deneme123");
     }
