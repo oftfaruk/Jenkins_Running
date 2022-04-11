@@ -74,7 +74,9 @@ public class MyStepdefs {
         WebDriver driver = new ChromeDriver(options);
 //        driver.get("https://google.com");
         Thread.sleep(5000);
-        driver.get("https://www.google.com/");
+        driver.get("https://test.rack-eye.com/login");
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+
         String title = driver.getTitle();
         System.out.println("title = " + title);
 //        driver.get("https://qascript.com/run-jenkins-job-with-selenium-tests-on-aws-ec2-linux-server/");
