@@ -78,7 +78,7 @@ public class MyStepdefs {
         Thread.sleep(5000);
         String title = driver.getTitle();
         System.out.println("title = " + title);
-        List<WebElement> elements = driver.findElements(By.xpath("//*"));
+        List<WebElement> elements = driver.findElements(By.id("username"));
         System.out.println("elements = " + elements);
         for (WebElement element:elements) {
             System.out.println("element.getText() = " + element.getText());
