@@ -65,7 +65,7 @@ public class MyStepdefs {
         //Driver.get().get("https://test.rack-eye.com/login");
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions opt = new FirefoxOptions();
-        opt.setBinary("/usr/bin/geckodriver");
+        opt.setBinary("/usr/bin/geckodriver.exe");
         WebDriver driver = new FirefoxDriver(opt);
         System.out.println("hello  deneme123");
     }
