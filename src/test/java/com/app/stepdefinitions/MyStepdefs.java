@@ -3,9 +3,12 @@ package com.app.stepdefinitions;
 
 import com.app.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.Collections;
 
@@ -47,7 +50,7 @@ public class MyStepdefs {
 ////        WebDriver driver = new FirefoxDriver();
 ////        driver = new FirefoxDriver(options);
 //        driver.get("https://test.rack-eye.com/login");
-    //    System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        //    System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 
 //        ChromeOptions options = new ChromeOptions();
 //        //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
@@ -59,7 +62,11 @@ public class MyStepdefs {
 //        driver.get("https://www.google.com/");
 
 
-     Driver.get().get("https://test.rack-eye.com/login");
+        //Driver.get().get("https://test.rack-eye.com/login");
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxOptions opt = new FirefoxOptions();
+        opt.setBinary("/usr/bin/geckodriver");
+        WebDriver driver = new FirefoxDriver(opt);
         System.out.println("hello  deneme123");
     }
 }
