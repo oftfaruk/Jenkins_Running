@@ -1,6 +1,7 @@
 package com.app.stepdefinitions;
 
 
+import com.app.utilities.ConfigurationReader;
 import com.app.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,7 +18,7 @@ import java.util.List;
 
 public class MyStepdefs {
 
-    static WebDriver driver;
+//    static WebDriver driver;
 
 
     @Given("User is on the login page")
@@ -68,39 +69,39 @@ public class MyStepdefs {
 //        driver.get("https://www.google.com/");
 
 
-        //Driver.get().get("https://test.rack-eye.com/login");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-      //  options.addArguments("headless");
-      //  options.setBinary("/usr/bin/google-chrome");
-
-        driver = new ChromeDriver(options);
-//        driver.get("https://google.com");
-        //Thread.sleep(5000);
-        driver.get("https://test.rack-eye.com/login");
-
-        Thread.sleep(5000);
-
-        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-
-        String title = driver.getTitle();
-        System.out.println("title = " + title);
-//        driver.get("https://qascript.com/run-jenkins-job-with-selenium-tests-on-aws-ec2-linux-server/");
+//        //Driver.get().get("https://test.rack-eye.com/login");
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+        //  options.addArguments("headless");
+//      //  options.setBinary("/usr/bin/google-chrome");
+//
+//        driver = new ChromeDriver(options);
+////        driver.get("https://google.com");
+//        //Thread.sleep(5000);
+//        driver.get("https://test.rack-eye.com/login");
 //
 //        Thread.sleep(5000);
-        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+//
 //        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-//        System.out.println("driver.getTitle() = " + driver.getTitle());
-//        driver.get("https://google.com");
-//        System.out.println("driver.findElement(By.xpath(\"//*\")).getText() = " + driver.findElement(By.xpath("//*")).getText());
+//
+//        String title = driver.getTitle();
+//        System.out.println("title = " + title);
+////        driver.get("https://qascript.com/run-jenkins-job-with-selenium-tests-on-aws-ec2-linux-server/");
+////
+////        Thread.sleep(5000);
 //        System.out.println("driver.getPageSource() = " + driver.getPageSource());
-//        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-//        System.out.println("driver.getTitle() = " + driver.getTitle());
-//        driver.navigate().back();
-//        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+////        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+////        System.out.println("driver.getTitle() = " + driver.getTitle());
+////        driver.get("https://google.com");
+////        System.out.println("driver.findElement(By.xpath(\"//*\")).getText() = " + driver.findElement(By.xpath("//*")).getText());
+////        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+////        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+////        System.out.println("driver.getTitle() = " + driver.getTitle());
+////        driver.navigate().back();
+////        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
-
+        Driver.get().get(ConfigurationReader.get("url"));
         System.out.println("hello  deneme123");
     }
 }
