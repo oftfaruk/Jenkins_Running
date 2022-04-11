@@ -108,9 +108,14 @@ public class MyStepdefs {
         System.out.println("Driver.get().getPageSource() = " + Driver.get().getPageSource());
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-//        driver.get("https://google.com");
+        Driver.get().get("https://google.com");
+        System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
+        Driver.get().navigate().back();
+        System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
+
 //        System.out.println("title "+driver.getTitle());
 //        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+
         System.out.println("hello  deneme123");
     }
 }
