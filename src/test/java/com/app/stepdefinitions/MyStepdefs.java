@@ -108,20 +108,24 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getPageSource() = " + Driver.get().getPageSource());
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new ChromeDriver();
-        Driver.get().get("https://test.rack-eye.com/login");
+//        Driver.get().get("https://test.rack-eye.com/login");
+        Driver.get().get("http://eaapp.somee.com/");
         System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
         //   Driver.get().navigate().back();
 
+        Driver.get().findElement(By.id("loginLink")).click();
+
+        System.out.println("Driver.get().getCurrentUrl() AFTER CLICK = " + Driver.get().getCurrentUrl());
         WebElement body=  Driver.get().findElement(By.tagName("body"));
         System.out.println("By.tagName(\"body\"))).getText() = " +body.getText());
         System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
-        System.out.println("Driver.get().findElement(By.xpath(\".//label[@for='username']\")).getText() = " + Driver.get().findElement(By.xpath(".//label[@for='username']")).getText());
+//        System.out.println("Driver.get().findElement(By.xpath(\".//label[@for='username']\")).getText() = " + Driver.get().findElement(By.xpath(".//label[@for='username']")).getText());
 
-        for (WebElement element : Driver.get().findElements(By.xpath("//*"))) {
-            System.out.println("element.isDisplayed() = " + element.isDisplayed());
-            System.out.println("element = " + element);
-            System.out.println("element.getText() = " + element.getText());
-        }
+//        for (WebElement element : Driver.get().findElements(By.xpath("//*"))) {
+//            System.out.println("element.isDisplayed() = " + element.isDisplayed());
+//            System.out.println("element = " + element);
+//            System.out.println("element.getText() = " + element.getText());
+//        }
         System.out.println("hello  deneme123");
 //        System.setProperty("webdriver.firefox.driver", "/usr/bin.firefox/firefox");
 
