@@ -42,7 +42,17 @@ public class Driver {
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
+                    ChromeOptions chOption= new ChromeOptions();
+                    chOption.addArguments("disable-gpu");
+                    chOption.setHeadless(true);
+                    chOption.addArguments("disable-infobars");
+                    chOption.addArguments("--disable-extensions");
+                    chOption.addArguments("--disable-notifications");
+                    chOption.addArguments("--disable-web-security");
+                    chOption.addArguments("--no-proxy-server");
+                    chOption.addArguments("--enable-automation");
+                    chOption.addArguments("--disable-save-password-bubble");
+                    driverPool.set(new ChromeDriver(chOption));
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();

@@ -111,6 +111,9 @@ public class MyStepdefs {
         Driver.get().get("https://test.rack-eye.com/login");
         System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
         //   Driver.get().navigate().back();
+
+        WebElement body=  Driver.get().findElement(By.tagName("body"));
+        System.out.println("By.tagName(\"body\"))).getText() = " +body.getText());
         System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
         System.out.println("Driver.get().findElement(By.xpath(\".//label[@for='username']\")).getText() = " + Driver.get().findElement(By.xpath(".//label[@for='username']")).getText());
 
@@ -119,11 +122,8 @@ public class MyStepdefs {
             System.out.println("element = " + element);
             System.out.println("element.getText() = " + element.getText());
         }
-
-
-//        System.out.println("title "+driver.getTitle());
-//        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-
         System.out.println("hello  deneme123");
+//        System.setProperty("webdriver.firefox.driver", "/usr/bin.firefox/firefox");
+
     }
 }
