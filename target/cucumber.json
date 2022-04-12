@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-04-12T12:19:34.608Z",
+        "start_timestamp": "2022-04-12T12:50:59.330Z",
         "line": 3,
         "name": "Login",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10531000000,
+              "duration": 11351000000,
               "status": "passed"
             },
             "line": 4,
