@@ -126,7 +126,7 @@ public class MyStepdefs {
 //            System.out.println("element = " + element);
 //            System.out.println("element.getText() = " + element.getText());
 //        }
-        System.out.println("hello  deneme123");
+     //   System.out.println("hello  deneme123");
 //        System.setProperty("webdriver.firefox.driver", "/usr/bin.firefox/firefox");
 
     }
