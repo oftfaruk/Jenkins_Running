@@ -120,7 +120,7 @@ public class MyStepdefs {
 //            System.out.println("element = " + element);
 //            System.out.println("element.getText() = " + element.getText());
 //        }
-     //   System.out.println("hello  deneme123");
+        //   System.out.println("hello  deneme123");
 //        System.setProperty("webdriver.firefox.driver", "/usr/bin.firefox/firefox");
 //        Driver.get().get("http://eaapp.somee.com/");
 //        System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
@@ -135,10 +135,18 @@ public class MyStepdefs {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        options.setBinary("/usr/bin/google-chrome");
-        WebDriver driver = new ChromeDriver(options);
+//        options.setBinary("/usr/bin/google-chrome");
+
 //        driver.get("https://www.google.com/");
 
+        options.addArguments("start-maximized"); // open Browser in maximized mode
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
         System.out.println("hello again");
         System.out.println("hello  deneme123");
 
