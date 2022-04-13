@@ -41,8 +41,10 @@ public class Driver {
                     driverPool.set(new ChromeDriver());
                     break;
                 case "chrome-headless":
+//                    WebDriverManager.chromedriver().setup();
+//                    ChromeOptions chOption= new ChromeOptions();
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions chOption= new ChromeOptions();
+                    driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
 //                    chOption.addArguments("disable-gpu");
 //                    chOption.setHeadless(true);
 //                //    chOption.addArguments("disable-infobars");
@@ -53,7 +55,7 @@ public class Driver {
 //                    chOption.addArguments("--enable-automation");
                 //   chOption.addArguments("--disable-save-password-bubble");
                   //  chOption.addArguments("--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/91.0.4472.114 Safari/537.36");
-                    driverPool.set(new ChromeDriver(chOption));
+                 //   driverPool.set(new ChromeDriver(chOption));
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
