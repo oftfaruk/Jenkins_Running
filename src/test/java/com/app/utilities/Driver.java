@@ -52,7 +52,6 @@ public class Driver {
 //                    chOption.addArguments("--enable-automation");
 //                    chOption.addArguments("--disable-save-password-bubble");
                     chOption.setHeadless(true);
-                    driverPool.set(new ChromeDriver(new ChromeOptions()));
                     driverPool.set(new ChromeDriver(chOption.setHeadless(true)));
                     break;
                 case "firefox":
