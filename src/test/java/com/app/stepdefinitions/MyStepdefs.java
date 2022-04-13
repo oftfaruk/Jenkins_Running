@@ -131,7 +131,7 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 //
 //        System.out.println("hello  deneme123");
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        WebDriverManager.chromedriver().setup();
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("headless");
