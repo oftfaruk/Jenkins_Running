@@ -43,7 +43,7 @@ public class Driver {
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chOption = new ChromeOptions();
-//                    chOption.addArguments("disable-infobars");
+                    chOption.addArguments("disable-infobars");
                     chOption.addArguments("--disable-extensions");
 //                    chOption.addArguments("--disable-notifications");
 //                    chOption.addArguments("--start-maximized");
