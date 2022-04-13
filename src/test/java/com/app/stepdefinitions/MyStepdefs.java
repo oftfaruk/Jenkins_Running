@@ -122,13 +122,22 @@ public class MyStepdefs {
 //        }
      //   System.out.println("hello  deneme123");
 //        System.setProperty("webdriver.firefox.driver", "/usr/bin.firefox/firefox");
-        Driver.get().get("http://eaapp.somee.com/");
-        System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
-        Driver.get().findElement(By.id("loginLink")).click();
-        System.out.println("Driver.get().getCurrentUrl() AFTER CLICK = " + Driver.get().getCurrentUrl());
-        WebElement body=  Driver.get().findElement(By.tagName("body"));
-        System.out.println("By.tagName(\"body\"))).getText() = " +body.getText());
-        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
+//        Driver.get().get("http://eaapp.somee.com/");
+//        System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
+//        Driver.get().findElement(By.id("loginLink")).click();
+//        System.out.println("Driver.get().getCurrentUrl() AFTER CLICK = " + Driver.get().getCurrentUrl());
+//        WebElement body=  Driver.get().findElement(By.tagName("body"));
+//        System.out.println("By.tagName(\"body\"))).getText() = " +body.getText());
+//        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
+//
+//        System.out.println("hello  deneme123");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.setBinary("/usr/bin/google-chrome");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
 
         System.out.println("hello  deneme123");
 
