@@ -134,6 +134,7 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
         options.addArguments("headless");
 //        options.setBinary("/usr/bin/google-chrome");
 
@@ -144,7 +145,7 @@ public class MyStepdefs {
         options.addArguments("--disable-extensions"); // disabling extensions
         options.addArguments("--disable-gpu"); // applicable to windows os only
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--no-sandbox");
+
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com/");
         System.out.println("hello again");
