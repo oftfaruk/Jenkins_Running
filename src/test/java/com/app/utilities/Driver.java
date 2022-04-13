@@ -45,9 +45,9 @@ public class Driver {
                     ChromeOptions chOption = new ChromeOptions();
                     chOption.addArguments("disable-infobars");
                     chOption.addArguments("--disable-extensions");
-//                    chOption.addArguments("--disable-notifications");
+                    chOption.addArguments("--disable-notifications");
 //                    chOption.addArguments("--start-maximized");
-//                    chOption.addArguments("--disable-web-security");
+                    chOption.addArguments("--disable-web-security");
 //                    chOption.addArguments("--no-proxy-server");
 //                    chOption.addArguments("--enable-automation");
 //                    chOption.addArguments("--disable-save-password-bubble");
