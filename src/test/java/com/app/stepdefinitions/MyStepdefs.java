@@ -139,7 +139,7 @@ public class MyStepdefs {
         WebDriver driver = new ChromeDriver(options);
 //        driver.get("https://www.google.com/");
 
-
+        System.out.println("hello again");
         System.out.println("hello  deneme123");
 
     }
