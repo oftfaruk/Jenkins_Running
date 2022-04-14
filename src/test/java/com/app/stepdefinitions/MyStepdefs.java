@@ -137,7 +137,7 @@ public class MyStepdefs {
 
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 //        File pathBinary = new File("/usr/bin/bin.firefox/firefox");
-        File pathBinary = new File("/usr/bin/firefox");
+        File pathBinary = new File("/usr/bin/bin.firefox");
 
         FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
         DesiredCapabilities desired = DesiredCapabilities.firefox();
