@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -134,18 +135,26 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 //
 //        System.out.println("hello  deneme123");
-
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-//        File pathBinary = new File("/usr/bin/bin.firefox/firefox");
-        File pathBinary = new File("/usr/bin/bin.firefox");
-
-        FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
-        DesiredCapabilities desired = DesiredCapabilities.firefox();
+        FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/bin.firefox"));
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("headless");
-        desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
-        WebDriver driver = new FirefoxDriver(options);
-        driver.get("https://www.google.com/");
+        options.setBinary(binary);
+        options.setLogLevel(FirefoxDriverLogLevel.TRACE);
+        FirefoxDriver driver = new FirefoxDriver(options);
+        driver.navigate().to("https://www.google.com/");
+
+
+////        File pathBinary = new File("/usr/bin/bin.firefox/firefox");
+//        File pathBinary = new File("/usr/bin/bin.firefox");
+//
+//        FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
+//        DesiredCapabilities desired = DesiredCapabilities.firefox();
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.addArguments("headless");
+//        desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
+//        WebDriver driver = new FirefoxDriver(options);
+//        driver.get("https://www.google.com/");
 
 
 //        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
