@@ -131,7 +131,7 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 //
 //        System.out.println("hello  deneme123");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         //WebDriverManager.chromedriver().setup();
         WebDriverManager.firefoxdriver().setup();
 //        ChromeOptions options = new ChromeOptions();
