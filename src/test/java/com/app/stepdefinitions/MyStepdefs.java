@@ -131,9 +131,11 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 //
 //        System.out.println("hello  deneme123");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/geckodriver");
+        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+        FirefoxOptions options = new FirefoxOptions();
         options.addArguments("headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
@@ -148,7 +150,8 @@ public class MyStepdefs {
         options.addArguments("--disable-gpu"); // applicable to windows os only
 
 
-        WebDriver driver = new ChromeDriver(options);
+//        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://www.google.com/");
         System.out.println("hello again");
         System.out.println("hello  deneme123");
