@@ -136,11 +136,11 @@ public class MyStepdefs {
 //        System.out.println("hello  deneme123");
 
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-        File pathBinary = new File("/usr/bin/firefox");
-        FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
-        DesiredCapabilities desired = DesiredCapabilities.firefox();
+//        File pathBinary = new File("/usr/bin/firefox");
+//        FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
+//        DesiredCapabilities desired = DesiredCapabilities.firefox();
         FirefoxOptions options = new FirefoxOptions();
-        desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
+      //  desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
         options.addArguments("headless");
         WebDriver driver = new FirefoxDriver(options);
         driver.get("https://www.google.co.in/");
