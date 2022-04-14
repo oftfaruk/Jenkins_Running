@@ -61,16 +61,20 @@ public class MyStepdefs {
 ////        WebDriver driver = new FirefoxDriver();
 ////        driver = new FirefoxDriver(options);
 //        driver.get("https://test.rack-eye.com/login");
-        //    System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-
-//        ChromeOptions options = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
 //        //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
 //        //   options.addArguments("start-maximized");
 //        options.addArguments("--no-sandbox");
 //        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 //        options.setExperimentalOption("useAutomationExtension", false);
-//        WebDriver driver = new ChromeDriver(options);
-//        driver.get("https://www.google.com/");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
+        System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+        System.out.println("driver.getPageSource() = " + driver.getPageSource());
 
 
 //        //Driver.get().get("https://test.rack-eye.com/login");
@@ -135,14 +139,14 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 //
 //        System.out.println("hello  deneme123");
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-        FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/bin.firefox"));
-        FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("headless");
-        options.setBinary(binary);
-        options.setLogLevel(FirefoxDriverLogLevel.TRACE);
-        FirefoxDriver driver = new FirefoxDriver(options);
-        driver.navigate().to("https://www.google.com/");
+//        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+//        FirefoxBinary binary = new FirefoxBinary(new File("/usr/bin/bin.firefox"));
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.addArguments("headless");
+//        options.setBinary(binary);
+//        options.setLogLevel(FirefoxDriverLogLevel.TRACE);
+//        FirefoxDriver driver = new FirefoxDriver(options);
+//        driver.navigate().to("https://www.google.com/");
 
 
 ////        File pathBinary = new File("/usr/bin/bin.firefox/firefox");
