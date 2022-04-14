@@ -140,8 +140,8 @@ public class MyStepdefs {
         FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
         DesiredCapabilities desired = DesiredCapabilities.firefox();
         FirefoxOptions options = new FirefoxOptions();
-        desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
         options.addArguments("headless");
+        desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
         WebDriver driver = new FirefoxDriver(options);
         driver.get("https://www.google.com/");
 
