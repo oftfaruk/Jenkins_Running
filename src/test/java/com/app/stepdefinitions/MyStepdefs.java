@@ -10,9 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.List;
 
@@ -131,28 +134,44 @@ public class MyStepdefs {
 //        System.out.println("Driver.get().getsource() = " + Driver.get().getPageSource());
 //
 //        System.out.println("hello  deneme123");
+
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-        //WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
-//        ChromeOptions options = new ChromeOptions();
+        File pathBinary = new File("/usr/bin/firefox");
+        FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
+        DesiredCapabilities desired = DesiredCapabilities.firefox();
         FirefoxOptions options = new FirefoxOptions();
+        desired.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
         options.addArguments("headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        WebDriver driver = new FirefoxDriver(options);
+        driver.get("https://www.google.co.in/");
 
-//        options.setBinary("/usr/bin/google-chrome");
 
-//        driver.get("https://www.google.com/");
 
-        options.addArguments("start-maximized"); // open Browser in maximized mode
-        options.addArguments("disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-gpu"); // applicable to windows os only
+
+
+
+//        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+        //WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.addArguments("headless");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//
+////        options.setBinary("/usr/bin/google-chrome");
+//
+////        driver.get("https://www.google.com/");
+//
+//        options.addArguments("start-maximized"); // open Browser in maximized mode
+//        options.addArguments("disable-infobars"); // disabling infobars
+//        options.addArguments("--disable-extensions"); // disabling extensions
+//        options.addArguments("--disable-gpu"); // applicable to windows os only
 
 
 //        WebDriver driver = new ChromeDriver(options);
-        WebDriver driver = new FirefoxDriver();
-        driver.get("https://www.google.com/");
+//        WebDriver driver = new FirefoxDriver();
+//        driver.get("https://www.google.com/");
         System.out.println("hello again");
         System.out.println("hello  deneme123");
 
