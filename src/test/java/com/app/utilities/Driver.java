@@ -43,6 +43,7 @@ public class Driver {
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chOption = new ChromeOptions();
+                    chOption.addArguments("--remote-debugging-port=9222");
                     chOption.addArguments("disable-infobars");
                     chOption.addArguments("--disable-extensions");
                     chOption.addArguments("--disable-notifications");
