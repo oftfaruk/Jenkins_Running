@@ -46,11 +46,11 @@ public class Driver {
                     chOption.addArguments("disable-infobars");
                     chOption.addArguments("--disable-extensions");
                     chOption.addArguments("--disable-notifications");
-//                    chOption.addArguments("--start-maximized");
+                    chOption.addArguments("--start-maximized");
                     chOption.addArguments("--disable-web-security");
-//                    chOption.addArguments("--no-proxy-server");
-//                    chOption.addArguments("--enable-automation");
-//                    chOption.addArguments("--disable-save-password-bubble");
+                    chOption.addArguments("--no-proxy-server");
+                    chOption.addArguments("--enable-automation");
+                    chOption.addArguments("--disable-save-password-bubble");
                     chOption.setHeadless(true);
                     driverPool.set(new ChromeDriver(chOption.setHeadless(true)));
                     break;

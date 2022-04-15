@@ -25,8 +25,8 @@ public class MyStepdefs {
 //    static WebDriver driver;
 
 
-    @Given("User is on the login page")
-    public void userIsOnTheLoginPage() throws InterruptedException {
+
+    public void userIsOnT() throws InterruptedException {
         //mvn clean install System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //      System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        ChromeOptions options = new ChromeOptions();
@@ -188,6 +188,15 @@ public class MyStepdefs {
 //        driver.get("https://www.google.com/");
         System.out.println("hello again");
         System.out.println("hello  deneme123");
+
+    }
+
+    @Given("User is on the login page")
+    public void userIsOnTheLoginPage() throws InterruptedException {
+        Driver.get().get(ConfigurationReader.get("url"));
+
+
+
 
     }
 }
