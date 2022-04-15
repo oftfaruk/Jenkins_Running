@@ -65,6 +65,7 @@ public class MyStepdefs {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
+        options.addArguments("--disable-dev-shm-usage");
 //        //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
 //        //   options.addArguments("start-maximized");
 //        options.addArguments("--no-sandbox");
