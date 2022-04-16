@@ -65,7 +65,7 @@ public class MyStepdefs {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
-        options.addArguments("headless");
+        options.addArguments("--headless");
         options.addArguments("--disable-dev-shm-usage");
         options.setBinary("/usr/bin/google-chrome");
 //        //  opt.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
@@ -193,8 +193,21 @@ public class MyStepdefs {
 
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
-        Driver.get().get(ConfigurationReader.get("url"));
-
+       // Driver.get().get(ConfigurationReader.get("url"));
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");
+        options.setBinary("/usr/bin/google-chrome");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
+        System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+        System.out.println("hello again");
+        System.out.println("hello  deneme123");
 
 
 
