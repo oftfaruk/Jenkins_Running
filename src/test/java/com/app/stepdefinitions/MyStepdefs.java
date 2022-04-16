@@ -192,7 +192,7 @@ public class MyStepdefs {
 
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/firefox/geckodriver");
         //ChromeOptions options = new ChromeOptions();
         FirefoxOptions options = new FirefoxOptions();
         options.setBinary("/usr/bin/firefox/firefox");
