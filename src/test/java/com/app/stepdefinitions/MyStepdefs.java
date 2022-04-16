@@ -25,7 +25,6 @@ public class MyStepdefs {
 //    static WebDriver driver;
 
 
-
     public void userIsOnT() throws InterruptedException {
         //mvn clean install System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //      System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
@@ -194,7 +193,8 @@ public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
         System.setProperty("webdriver.firefox.driver", "/usr/bin/firefox");
-        ChromeOptions options = new ChromeOptions();
+        //ChromeOptions options = new ChromeOptions();
+        FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
@@ -203,7 +203,6 @@ public class MyStepdefs {
         options.addArguments("--no-sandbox"); // Bypass OS security model
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://google.com");
-
 
 
     }
