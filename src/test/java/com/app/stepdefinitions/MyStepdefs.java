@@ -194,11 +194,11 @@ public class MyStepdefs {
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
        // Driver.get().get(ConfigurationReader.get("url"));
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromium.google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox");
-        options.setBinary("/usr/bin/google-chrome");
+        options.setBinary("/usr/bin/chromium.google-chrome");
         options.addArguments("--headless");
         options.addArguments("--disable-dev-shm-usage");
 
