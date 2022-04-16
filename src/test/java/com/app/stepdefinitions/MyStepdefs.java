@@ -204,17 +204,21 @@ public class MyStepdefs {
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
 //        WebDriver driver = new FirefoxDriver(options);
 //        driver.get("https://google.com");
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/bin.firefox/geckodriver");
-        FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--headless");
-        options.addArguments("start-maximized");
-        options.addArguments("disable-infobars");
-        options.addArguments("disable-infobars");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--disable-dev-shm-usage");
-        //options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
-        FirefoxDriver driver = new FirefoxDriver(options);
-       // driver.get("https://www.google.com/");
+//        System.setProperty("webdriver.gecko.driver", "/usr/bin/bin.firefox/geckodriver");
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.addArguments("--headless");
+//        options.addArguments("start-maximized");
+//        options.addArguments("disable-infobars");
+//        options.addArguments("disable-infobars");
+//        options.addArguments("--disable-gpu");
+//        options.addArguments("--disable-dev-shm-usage");
+//        //options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+//        FirefoxDriver driver = new FirefoxDriver(options);
+//       // driver.get("https://www.google.com/");
+        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
+
+
 
 
     }
