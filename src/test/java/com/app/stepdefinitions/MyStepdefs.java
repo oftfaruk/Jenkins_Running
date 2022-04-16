@@ -193,22 +193,16 @@ public class MyStepdefs {
 
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
-       // Driver.get().get(ConfigurationReader.get("url"));
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromium.google-chrome");
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--no-sandbox");
-        options.setBinary("/usr/bin/chromium.google-chrome");
-        options.addArguments("--headless");
-        options.addArguments("--disable-dev-shm-usage");
-
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("start-maximized"); // open Browser in maximized mode
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--no-sandbox"); // Bypass OS security model
         WebDriver driver = new ChromeDriver(options);
-//        driver.get("https://www.google.com/");
-//        System.out.println("driver.getTitle() = " + driver.getTitle());
-//        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-//        System.out.println("driver.getPageSource() = " + driver.getPageSource());
-        System.out.println("hello again");
-        System.out.println("hello  deneme123");
+        driver.get("https://google.com");
 
 
 
