@@ -192,7 +192,7 @@ public class MyStepdefs {
 
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
-        System.setProperty("webdriver.firefox.driver", "/usr/bin/firefox");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         //ChromeOptions options = new ChromeOptions();
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
