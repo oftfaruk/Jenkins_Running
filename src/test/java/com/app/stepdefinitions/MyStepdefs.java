@@ -207,6 +207,7 @@ public class MyStepdefs {
         System.setProperty("webdriver.gecko.driver", "/usr/bin/firefox/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
+        options.addArguments("start-maximized");
         options.addArguments("--disable-dev-shm-usage");
         options.setBinary(new FirefoxBinary(new File("/usr/bin/firefox/firefox")));
         FirefoxDriver driver = new FirefoxDriver(options);
