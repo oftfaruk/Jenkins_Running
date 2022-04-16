@@ -207,10 +207,11 @@ public class MyStepdefs {
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
-//        options.addArguments("start-maximized");
-//        options.addArguments("disable-infobars");
-//        options.addArguments("disable-infobars");
-//        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("start-maximized");
+        options.addArguments("disable-infobars");
+        options.addArguments("disable-infobars");
+        options.addArguments("--disable-gpu");
         options.addArguments("--disable-dev-shm-usage");
         options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
         FirefoxDriver driver = new FirefoxDriver(options);
