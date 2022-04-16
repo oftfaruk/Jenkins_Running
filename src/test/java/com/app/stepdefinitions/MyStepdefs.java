@@ -204,7 +204,7 @@ public class MyStepdefs {
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
 //        WebDriver driver = new FirefoxDriver(options);
 //        driver.get("https://google.com");
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/firefox/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.setBinary(new FirefoxBinary(new File("/usr/bin/firefox/firefox")));
         FirefoxDriver driver = new FirefoxDriver(options);
