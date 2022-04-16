@@ -204,7 +204,7 @@ public class MyStepdefs {
 //        options.addArguments("--no-sandbox"); // Bypass OS security model
 //        WebDriver driver = new FirefoxDriver(options);
 //        driver.get("https://google.com");
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/bin.firefox/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
 //        options.addArguments("start-maximized");
