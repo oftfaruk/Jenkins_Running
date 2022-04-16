@@ -197,15 +197,15 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        options.addArguments("--disable-dev-shm-usage");
-        options.setBinary("/usr/bin/google-chrome");
-        WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
-        System.out.println("driver.getTitle() = " + driver.getTitle());
-        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-        System.out.println("driver.getPageSource() = " + driver.getPageSource());
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--headless");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.setBinary("/usr/bin/google-chrome");
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.get("https://www.google.com/");
+//        System.out.println("driver.getTitle() = " + driver.getTitle());
+//        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+//        System.out.println("driver.getPageSource() = " + driver.getPageSource());
         System.out.println("hello again");
         System.out.println("hello  deneme123");
 
