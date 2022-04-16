@@ -193,7 +193,7 @@ public class MyStepdefs {
 
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.firefox.driver", "/usr/bin/firefox");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("start-maximized"); // open Browser in maximized mode
