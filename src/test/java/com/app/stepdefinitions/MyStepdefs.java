@@ -206,7 +206,7 @@ public class MyStepdefs {
 //        driver.get("https://google.com");
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
-        options.setBinary(new FirefoxBinary(new File("/usr/bin/firefox")));
+        options.setBinary(new FirefoxBinary(new File("/usr/bin/firefox/firefox")));
         FirefoxDriver driver = new FirefoxDriver(options);
         driver.get("https://www.google.com/");
 
