@@ -220,7 +220,7 @@ public class MyStepdefs {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.setBinary("/usr/bin/google-chrome");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
 
 
     }
