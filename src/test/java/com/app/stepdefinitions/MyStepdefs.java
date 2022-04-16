@@ -195,7 +195,7 @@ public class MyStepdefs {
         System.setProperty("webdriver.gecko.driver", "/usr/bin/firefox/geckodriver");
         //ChromeOptions options = new ChromeOptions();
         FirefoxOptions options = new FirefoxOptions();
-        options.setBinary("/usr/bin/firefox/firefox");
+        options.setBinary("/usr/bin/firefox");
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("start-maximized"); // open Browser in maximized mode
         options.addArguments("disable-infobars"); // disabling infobars
