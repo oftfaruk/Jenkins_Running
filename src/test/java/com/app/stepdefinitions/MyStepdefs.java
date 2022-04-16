@@ -192,18 +192,23 @@ public class MyStepdefs {
 
     @Given("User is on the login page")
     public void userIsOnTheLoginPage() throws InterruptedException {
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/firefox/geckodriver");
-        //ChromeOptions options = new ChromeOptions();
+//        System.setProperty("webdriver.gecko.driver", "/usr/bin/firefox/geckodriver");
+//        //ChromeOptions options = new ChromeOptions();
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.setBinary("/usr/bin/firefox");
+//        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//        options.addArguments("start-maximized"); // open Browser in maximized mode
+//        options.addArguments("disable-infobars"); // disabling infobars
+//        options.addArguments("--disable-extensions"); // disabling extensions
+//        options.addArguments("--disable-gpu"); // applicable to windows os only
+//        options.addArguments("--no-sandbox"); // Bypass OS security model
+//        WebDriver driver = new FirefoxDriver(options);
+//        driver.get("https://google.com");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
-        options.setBinary("/usr/bin/firefox");
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("start-maximized"); // open Browser in maximized mode
-        options.addArguments("disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-gpu"); // applicable to windows os only
-        options.addArguments("--no-sandbox"); // Bypass OS security model
-        WebDriver driver = new FirefoxDriver(options);
-        driver.get("https://google.com");
+        options.setBinary(new FirefoxBinary(new File("/usr/bin/firefox")));
+        FirefoxDriver driver = new FirefoxDriver(options);
+        driver.get("https://www.google.com/");
 
 
     }
