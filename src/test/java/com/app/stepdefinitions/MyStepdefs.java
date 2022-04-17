@@ -225,7 +225,7 @@ public class MyStepdefs {
 //        WebDriver driver = new FirefoxDriver(opt);
 
 //        o.add_argument('--remote-debugging-port=9222')
-        System.setProperty("webdriver.chrome.driver", "/tmp");
+      //  System.setProperty("webdriver.chrome.driver", "/tmp");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/tmp");
