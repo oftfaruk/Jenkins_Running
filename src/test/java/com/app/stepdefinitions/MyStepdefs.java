@@ -205,20 +205,20 @@ public class MyStepdefs {
 //        WebDriver driver = new FirefoxDriver(options);
 //        driver.get("https://google.com");
 
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-//
-        FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-////        options.addArguments("start-maximized");
-////        options.addArguments("disable-infobars");
-////        options.addArguments("--disable-gpu");
-////        options.addArguments("--disable-dev-shm-usage");
-//       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
-        options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
-      //  options.addArguments("--remote-debugging-port=9222");
-        FirefoxDriver driver = new FirefoxDriver(options);
-        driver.get("https://www.google.com/");
+//        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+////
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.addArguments("--headless");
+//        options.addArguments("--no-sandbox");
+//////        options.addArguments("start-maximized");
+//////        options.addArguments("disable-infobars");
+//////        options.addArguments("--disable-gpu");
+//////        options.addArguments("--disable-dev-shm-usage");
+////       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+//        options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+//      //  options.addArguments("--remote-debugging-port=9222");
+//        FirefoxDriver driver = new FirefoxDriver(options);
+//        driver.get("https://www.google.com/");
 
 //         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        WebDriverManager.firefoxdriver().setup();
@@ -253,6 +253,12 @@ public class MyStepdefs {
 //        System.out.println("options.getBrowserName() = " + options.getBrowserName());
 //        WebDriver driver = new ChromeDriver(options);
 ////        driver.get("https://www.google.com/");
+
+
+
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
+
 
 
     }
