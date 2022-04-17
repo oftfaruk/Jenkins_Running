@@ -260,7 +260,7 @@ public class MyStepdefs {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/chromium-browser");
+       // options.setBinary("/usr/bin/chromium-browser");
         options.addArguments("--headless");
         options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
