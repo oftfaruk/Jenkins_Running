@@ -209,7 +209,7 @@ public class MyStepdefs {
 //
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
-////        options.addArguments("--no-sandbox");
+        options.addArguments("--no-sandbox");
 ////        options.addArguments("start-maximized");
 ////        options.addArguments("disable-infobars");
 ////        options.addArguments("--disable-gpu");
