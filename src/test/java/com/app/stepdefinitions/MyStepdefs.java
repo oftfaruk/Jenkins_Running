@@ -232,6 +232,7 @@ public class MyStepdefs {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("headless");
         options.setBinary("/usr/bin/google-chrome");
+        System.out.println("options.getBrowserName() = " + options.getBrowserName());
 //        WebDriver driver = new ChromeDriver(options);
 //        driver.get("https://www.google.com/");
 
