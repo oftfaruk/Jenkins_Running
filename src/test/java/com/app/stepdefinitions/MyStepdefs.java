@@ -215,7 +215,7 @@ public class MyStepdefs {
 ////        options.addArguments("--disable-gpu");
 ////        options.addArguments("--disable-dev-shm-usage");
 //       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
-        options.setBinary(new FirefoxBinary(new File("/home/ec2-user/bin.firefox/firefox")));
+        options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
         options.addArguments("--remote-debugging-port=9222");
         FirefoxDriver driver = new FirefoxDriver(options);
         driver.get("https://www.google.com/");
