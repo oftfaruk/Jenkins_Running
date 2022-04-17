@@ -5,6 +5,7 @@ import com.app.utilities.ConfigurationReader;
 import com.app.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromiumDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -257,8 +258,9 @@ public class MyStepdefs {
 
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
+
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
+        options.setBinary("/usr/bin/chromium-browser");
         options.addArguments("--headless");
         options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
