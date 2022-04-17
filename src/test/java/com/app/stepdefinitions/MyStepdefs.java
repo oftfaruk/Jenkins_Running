@@ -255,10 +255,11 @@ public class MyStepdefs {
 ////        driver.get("https://www.google.com/");
 
 
-
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
-
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
 
 
     }
