@@ -205,7 +205,8 @@ public class MyStepdefs {
 //        WebDriver driver = new FirefoxDriver(options);
 //        driver.get("https://google.com");
 
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+//        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/bin.firefox/firefox");
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
