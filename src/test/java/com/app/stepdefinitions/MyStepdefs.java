@@ -214,7 +214,8 @@ public class MyStepdefs {
 ////        options.addArguments("disable-infobars");
 ////        options.addArguments("--disable-gpu");
 ////        options.addArguments("--disable-dev-shm-usage");
-       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+//       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+       options.setBinary(new FirefoxBinary(new File("/home/ec2-user/firefox")));
         FirefoxDriver driver = new FirefoxDriver(options);
         driver.get("https://www.google.com/");
 
