@@ -228,7 +228,7 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/tmp");
+        //options.setBinary("/tmp");
         options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
