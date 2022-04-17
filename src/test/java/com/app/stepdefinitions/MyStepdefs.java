@@ -225,7 +225,7 @@ public class MyStepdefs {
 //        WebDriver driver = new FirefoxDriver(opt);
 
 //        o.add_argument('--remote-debugging-port=9222')
-      //  System.setProperty("webdriver.chrome.driver", "/tmp");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/tmp");
@@ -233,7 +233,7 @@ public class MyStepdefs {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("headless");
-        options.setBinary("/usr/bin/google-chrome");
+        options.setBinary("/usr/bin/chromium-browser");
         System.out.println("options.getBrowserName() = " + options.getBrowserName());
         WebDriver driver = new ChromeDriver(options);
 //        driver.get("https://www.google.com/");
