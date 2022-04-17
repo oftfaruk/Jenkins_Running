@@ -1,4 +1,0 @@
-com\app\stepdefinitions\MyStepdefs.class
-com\app\runnners\CukesRunner.class
-com\app\utilities\ConfigurationReader.class
-com\app\utilities\Driver.class
