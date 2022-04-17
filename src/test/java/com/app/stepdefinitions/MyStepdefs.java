@@ -228,7 +228,7 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/opt/google/chrome/google-chrome");
+       // options.setBinary("/opt/google/chrome/google-chrome");
         options.addArguments("headless");
 //        options.addArguments("--ignore-certificate-errors");
 //        options.addArguments("--test-type");
