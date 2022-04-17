@@ -225,15 +225,15 @@ public class MyStepdefs {
 //        WebDriver driver = new FirefoxDriver(opt);
 
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("headless");
         options.setBinary("/usr/bin/google-chrome");
-        WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.get("https://www.google.com/");
 
 
     }
