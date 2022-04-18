@@ -256,13 +256,13 @@ public class MyStepdefs {
 ////        driver.get("https://www.google.com/");
 
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-         options.setBinary("/usr/bin/google-chrome");
+      //  options.addArguments("--no-sandbox");
+       //  options.setBinary("/usr/bin/google-chrome");
         options.addArguments("--headless");
-        options.addArguments("--disable-dev-shm-usage");
+      //  options.addArguments("--disable-dev-shm-usage");
       //  options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
        // driver.get("https://www.google.com/");
