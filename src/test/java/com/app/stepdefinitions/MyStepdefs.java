@@ -256,7 +256,7 @@ public class MyStepdefs {
 ////        driver.get("https://www.google.com/");
 
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
