@@ -264,7 +264,7 @@ public class MyStepdefs {
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-debugging-port=9222");
+      //  options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com/");
 
