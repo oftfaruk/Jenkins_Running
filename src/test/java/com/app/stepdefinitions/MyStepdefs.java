@@ -206,20 +206,6 @@ public class MyStepdefs {
 //        WebDriver driver = new FirefoxDriver(options);
 //        driver.get("https://google.com");
 
-//        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-////
-//        FirefoxOptions options = new FirefoxOptions();
-//        options.addArguments("--headless");
-//        options.addArguments("--no-sandbox");
-//////        options.addArguments("start-maximized");
-//////        options.addArguments("disable-infobars");
-//////        options.addArguments("--disable-gpu");
-//////        options.addArguments("--disable-dev-shm-usage");
-////       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
-//        options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
-//      //  options.addArguments("--remote-debugging-port=9222");
-//        FirefoxDriver driver = new FirefoxDriver(options);
-//        driver.get("https://www.google.com/");
 
 //         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        WebDriverManager.firefoxdriver().setup();
@@ -256,17 +242,32 @@ public class MyStepdefs {
 ////        driver.get("https://www.google.com/");
 
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-         options.setBinary("/usr/bin/google-chrome");
-        options.addArguments("--headless");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-debugging-port=9222");
-        WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
+//   chrome
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--no-sandbox");
+//         options.setBinary("/usr/bin/google-chrome");
+//        options.addArguments("--headless");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--remote-debugging-port=9222");
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.get("https://www.google.com/");
 
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+//////        options.addArguments("start-maximized");
+//////        options.addArguments("disable-infobars");
+//////        options.addArguments("--disable-gpu");
+////        options.addArguments("--disable-dev-shm-usage");
+////       options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+//        options.setBinary(new FirefoxBinary(new File("/usr/bin/bin.firefox/firefox")));
+//      //  options.addArguments("--remote-debugging-port=9222");
+        FirefoxDriver driver = new FirefoxDriver(options);
+        driver.get("https://www.google.com/");
 
 
     }
