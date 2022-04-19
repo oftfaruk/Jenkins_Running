@@ -243,7 +243,7 @@ public class MyStepdefs {
 
 
 //   chrome
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
