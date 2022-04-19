@@ -271,17 +271,17 @@ public class MyStepdefs {
 
 
 
-        WebDriverManager.firefoxdriver().setup();
-        FirefoxOptions opt = new FirefoxOptions();
-        opt.setBinary("/usr/bin/geckodriver.exe");
-        WebDriver driver = new FirefoxDriver(opt);
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-//        WebDriverManager.chromedriver().setup();
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("headless");
-//        options.setBinary("/usr/bin/google-chrome");
-//        WebDriver driver = new ChromeDriver(options);
-//        driver.get("https://www.google.com/");
+//        WebDriverManager.firefoxdriver().setup();
+//        FirefoxOptions opt = new FirefoxOptions();
+//        opt.setBinary("/usr/bin/geckodriver.exe");
+//        WebDriver driver = new FirefoxDriver(opt);
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.setBinary("/usr/bin/google-chrome");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
 
         System.out.println("hello  deneme123");
 
