@@ -275,7 +275,7 @@ public class MyStepdefs {
 //        FirefoxOptions opt = new FirefoxOptions();
 //        opt.setBinary("/usr/bin/geckodriver.exe");
 //        WebDriver driver = new FirefoxDriver(opt);
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chrome-linux");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
