@@ -243,16 +243,16 @@ public class MyStepdefs {
 
 
 //   chrome
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-         options.setBinary("/usr/bin/google-chrome");
-        options.addArguments("--headless");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-debugging-port=9222");
-        WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--no-sandbox");
+//         options.setBinary("/usr/bin/google-chrome");
+//        options.addArguments("--headless");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--remote-debugging-port=9222");
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.get("https://www.google.com/");
 
 //        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 //        WebDriverManager.firefoxdriver().setup();
@@ -269,6 +269,21 @@ public class MyStepdefs {
 //        FirefoxDriver driver = new FirefoxDriver(options);
 //        driver.get("https://www.google.com/");
 
+
+
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxOptions opt = new FirefoxOptions();
+        opt.setBinary("/usr/bin/geckodriver.exe");
+        WebDriver driver = new FirefoxDriver(opt);
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("headless");
+//        options.setBinary("/usr/bin/google-chrome");
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.get("https://www.google.com/");
+
+        System.out.println("hello  deneme123");
 
     }
 }
