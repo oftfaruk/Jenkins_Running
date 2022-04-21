@@ -254,6 +254,7 @@ public class MyStepdefs {
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.google.com/");
 
+
 //        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 //        WebDriverManager.firefoxdriver().setup();
 //        FirefoxOptions options = new FirefoxOptions();
