@@ -282,6 +282,7 @@ public class MyStepdefs {
         //   options.setBinary("/usr/bin/google-chrome");
         // WebDriver driver = new ChromeDriver(options);
         //  driver.get("https://www.google.com/");
+        Driver.get().get("https://www.booktrust.org.uk/books-and-reading/");
         System.out.println("hello  deneme123");
 
     }
