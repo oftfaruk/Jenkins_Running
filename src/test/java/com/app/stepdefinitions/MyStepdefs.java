@@ -252,7 +252,7 @@ public class MyStepdefs {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
-        driver.get("https://www.google.com/");
+      //  driver.get("https://www.google.com/");
 
 
 //        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
