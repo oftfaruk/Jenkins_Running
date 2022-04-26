@@ -243,16 +243,16 @@ public class MyStepdefs {
 
 
 //   chrome
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-//        WebDriverManager.chromedriver().setup();
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--no-sandbox");
-//         options.setBinary("/usr/bin/google-chrome");
-//        options.addArguments("--headless");
-//        options.addArguments("--disable-dev-shm-usage");
-//        options.addArguments("--remote-debugging-port=9222");
-//        WebDriver driver = new ChromeDriver(options);
-      //  driver.get("https://www.google.com/");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+         options.setBinary("/usr/bin/chromium");
+        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--remote-debugging-port=9222");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.google.com/");
 
 
 //        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
@@ -282,9 +282,9 @@ public class MyStepdefs {
         //   options.setBinary("/usr/bin/google-chrome");
         // WebDriver driver = new ChromeDriver(options);
         //  driver.get("https://www.google.com/");
-        Driver.get().get("https://test.rack-eye.com/login");
-        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
-        System.out.println("Driver.get().findElement(By.xpath(\"//p\")).getText() = " + Driver.get().findElement(By.xpath("//p")).getText());
+//        Driver.get().get("https://test.rack-eye.com/login");
+//        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
+//        System.out.println("Driver.get().findElement(By.xpath(\"//p\")).getText() = " + Driver.get().findElement(By.xpath("//p")).getText());
         System.out.println("hello  deneme123");
 
     }
