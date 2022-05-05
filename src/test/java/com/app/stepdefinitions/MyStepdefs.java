@@ -285,6 +285,7 @@ public class MyStepdefs {
 //        Driver.get().get("https://test.rack-eye.com/login");
 //        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
 //        System.out.println("Driver.get().findElement(By.xpath(\"//p\")).getText() = " + Driver.get().findElement(By.xpath("//p")).getText());
+        Driver.get().get("https://www.google.com/");
         System.out.println("hello  deneme123");
 
     }
